@@ -6,7 +6,7 @@
 /*   By: bgauthie <bgauthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:30:16 by bgauthie          #+#    #+#             */
-/*   Updated: 2023/10/20 14:58:12 by bgauthie         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:46:42 by bgauthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,17 @@
 	pthread_mutex_lock, pthread_mutex_unlock, pthread_mutex_destroy*/
 # include <pthread.h>
 
+# define ERR_ARGS "Wrong number of arguments.\n"
+# define WRG_ARGS "Arguments should be numbers.\n"
+typedef struct		s_args
+{
+	int	nb_of_philo;
+	int	time_die;
+	int	time_eat;
+	int	time_sleep;
+	int	goal_eat;
+}				t_args;
 
+int	check_args(int ac, char **av, t_args *args);
 
 #endif

@@ -3,7 +3,8 @@ CC = cc -Wall -Werror -Wextra -g3
 RM = rm -rf
 
 SRC_PATH = ./src/
-SRC_FILE = 	main.c
+SRC_FILE = 	main.c\
+			get_args.c
 SRC = $(addprefix $(SRC_PATH), $(SRC_FILE))
 
 OBJ_PATH = ./obj/
